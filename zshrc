@@ -5,7 +5,8 @@ export HISTCONTROL=ignoredups:erasedups
 
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-alias bp="vim ~/.bash_profile && source ~/.bash_profile"
+alias vr="vim ~/.bootstrap/vimrc"
+alias zr="vim ~/.bootstrap/zshrc && source ~/.zshrc"
 
 alias ga="git add"
 alias gaa="git add ."
@@ -20,4 +21,6 @@ alias gs="git status"
 
 alias la="ls -al"
 
-alias json="cd ~/Documents/Development/json"
+alias bc="cd ~/Documents/Development/Brainchild"
+
+ZSH_THEME=agnoster

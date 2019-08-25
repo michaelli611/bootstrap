@@ -23,6 +23,11 @@ function brew_cask_install_or_upgrade {
     fi
 }
 
+#Tap
+brew tap homebrew/cask-fonts
+brew tap sambadevi/powerlevel9k
+
+# Formulas
 brew_install_or_upgrade cmake
 brew_install_or_upgrade htop
 brew_install_or_upgrade git
@@ -31,6 +36,7 @@ brew_install_or_upgrade openssl
 brew_install_or_upgrade python
 brew_install_or_upgrade tmux
 brew_install_or_upgrade vim
+brew_isntall_or_upgrade powerlevel9k
 
 # Casks
 brew_cask_install_or_upgrade alfred
@@ -45,8 +51,8 @@ brew_cask_install_or_upgrade spotify
 brew_cask_install_or_upgrade sublime-text
 
 #fonts
-brew tap homebrew/cask-fonts
 brew cask install font-hack-nerd-font
+pip3 install --user powerline-status
 
 # Delete old versions
 brew cleanup
