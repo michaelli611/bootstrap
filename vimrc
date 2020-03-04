@@ -16,6 +16,10 @@ Plugin 'https://github.com/kien/ctrlp.vim.git'
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'itchyny/lightline.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'posva/vim-vue'
+Plugin 'yggdroot/indentline'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -50,6 +54,8 @@ set hlsearch
 
 set laststatus=2
 
+set clipboard=unnamed
+
 let g:lightline = {
   \ 'colorscheme' : 'wombat',
   \ }
@@ -78,6 +84,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " for vim-glsl *.vs and *.fs
 autocmd! BufNewFile,BufRead *.vs,*.fs,*.gs set ft=glsl
+autocmd! BufNewFile,BufRead *.vue set ft=vue
 
 function! SetupPython()
     " Here, you can have the final say on what is set.  So
@@ -89,3 +96,6 @@ endfunction
 command! -bar SetupPython call SetupPython()
 
 set backspace=indent,eol,start
+
+" Different bracket colors
+let g:rainbow_active = 1
